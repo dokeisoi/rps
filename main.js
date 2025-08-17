@@ -1,9 +1,14 @@
-function getComputerChoice () {
+function getComputerChoice() {
     let choiceSelector = Math.random();
     let cpuChoice = (choiceSelector <= 0.333)
-        ? "Rock"
+        ? "rock"
         : (choiceSelector >= 0.333 && choiceSelector <= 0.666)
-        ? "Paper"
-        : "Scissors"
+        ? "paper"
+        : "scissors"
     return cpuChoice;
+}
+
+function getUserChoice() {
+    let userChoice = prompt("Choose: ");
+    return userChoice;
 }
