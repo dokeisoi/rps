@@ -14,24 +14,45 @@ const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 
-rock.addEventListener('click', () => {
+rock.addEventListener('click', async () => {
     playRound('Rock');
     userScoreDisplay.textContent = `Your score: ${userScore}`;
     cpuScoreDisplay.textContent = `CPU score: ${cpuScore}`;
-    cpuSelectionDisplay.textContent = `CPU chose: ${cpuChoice}`;
+    cpuSelectionDisplay.textContent = `CPU chose ${cpuChoice}`;
+    checkWinner();
 });
-paper.addEventListener('click', () => {
+
+paper.addEventListener('click', async () => {
     playRound('Paper');
     userScoreDisplay.textContent = `Your score: ${userScore}`;
     cpuScoreDisplay.textContent = `CPU score: ${cpuScore}`;
-    cpuSelectionDisplay.textContent = `CPU chose: ${cpuChoice}`;
+    cpuSelectionDisplay.textContent = `CPU chose ${cpuChoice}`;
+    checkWinner();
 });
-scissors.addEventListener('click', () => {
+
+scissors.addEventListener('click', async () => {
     playRound('Scissors');
     userScoreDisplay.textContent = `Your score: ${userScore}`;
     cpuScoreDisplay.textContent = `CPU score: ${cpuScore}`;
     cpuSelectionDisplay.textContent = `CPU chose: ${cpuChoice}`;
+    checkWinner();
 });
+
+function checkWinner() {
+    if (userScore >= 2.5 && cpuScore >= 2.5) { 
+        cpuSelectionDisplay.textContent = `DRAW`;
+        userScore = 0;
+        cpuScore = 0;
+    } else if (userScore >= 2.5) {
+        cpuSelectionDisplay.textContent = `You win! Yeay!`;
+        userScore = 0;
+        cpuScore = 0;
+    } else if (cpuScore >= 2.5) {
+        cpuSelectionDisplay.textContent = `You lose! Boo-hoo!`;
+        userScore = 0;
+        cpuScore = 0;
+    }
+}
 
 function getComputerChoice() {
     let choiceSelector = Math.random();
