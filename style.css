@@ -1,0 +1,32 @@
+body {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 40px;
+}
+
+div {
+    padding: 10px;
+    border-radius: 50px;
+}
+
+#cpu-selection {
+    background-color: blue;
+    color: beige;
+}
+
+#cpu-score {
+    background-color: burlywood;
+}
+
+#user-score {
+    background-color: chartreuse;
+}
+
+button {
+    background-color: cyan;
+    color: black;
+    font-size: 20px;
+    border-radius: 70px;
+    border-color: rebeccapurple;
+    border-width: 20px;
+}

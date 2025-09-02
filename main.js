@@ -34,7 +34,7 @@ scissors.addEventListener('click', async () => {
     playRound('Scissors');
     userScoreDisplay.textContent = `Your score: ${userScore}`;
     cpuScoreDisplay.textContent = `CPU score: ${cpuScore}`;
-    cpuSelectionDisplay.textContent = `CPU chose: ${cpuChoice}`;
+    cpuSelectionDisplay.textContent = `CPU chose ${cpuChoice}`;
     checkWinner();
 });
 
